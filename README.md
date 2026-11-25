@@ -24,13 +24,11 @@ The original sketches used different brokers: a public Mosquitto test broker for
 
 Both nodes report Wi-Fi RSSI. PIR detects motion, not reliable headcount or continuous occupancy.
 
-## Setup
-1. Install Arduino IDE and the board packages and libraries listed in [requirements](docs/requirements.md).
-2. Follow [wiring](docs/wiring.md), checking your actual module voltage and pinout.
-3. In each sketch directory, copy `secrets.example.h` to `secrets.h`. Enter local Wi-Fi and broker settings; never commit this file.
-4. Select the correct board and serial port; compile and upload each sketch separately.
-5. Open Serial Monitor at 115200 baud and subscribe to the configured MQTT topics as described in [MQTT configuration](docs/mqtt_configuration.md).
-6. Follow the [validation plan](docs/validation.md).
+3. Configure the credentials:
+   - ESP32-C3: Copy `secrets_esp32.example.h` to `secrets.h`.
+   - Arduino Nano 33 IoT: Copy `secrets.example.h` to `secrets.h`.
+   - Enter local Wi-Fi and MQTT broker settings.
+   - Never commit the actual `secrets.h` files.
 
 ## Repository contents
 - [Environmental firmware](firmware/esp32_environment/esp32_environment.ino)

@@ -5,14 +5,14 @@
 #include <DHT.h>
 #include <ArduinoMqttClient.h>
 
-const char* gNumber    = "123";
-const char* deviceName = "esp32c3";
+const char gNumber = "TEAM_02";
+const char deviceName = "esp32c3";
 
-const char* ssid     = "abcd";
-const char* password = "xyz";
-const char* mqtt_server = "test.mosquitto.org";
+const char ssid[] = "YOUR_WIFI_SSID";
+const char pass[] = "YOUR_WIFI_PASSWORD";
+const char mqtt_server = "test.mosquitto.org";
 const int   mqtt_port   = 1883;
-const char* mqtt_topic  = "gmu/ece508/G5594/nano33iot";
+const char mqtt_topic  = "gmu/ece508/G5594/nano33iot";
 WiFiClient wifiClient;
 MqttClient mqttClient(wifiClient);
 #define SCREEN_WIDTH 128

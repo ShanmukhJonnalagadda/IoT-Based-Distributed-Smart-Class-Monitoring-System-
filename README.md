@@ -40,6 +40,31 @@ Both nodes report Wi-Fi RSSI. PIR detects motion, not reliable headcount or cont
 
 Retain the original project report and demonstration video after reviewing them for personal information and sharing permissions. The original MQTT log contains identifying topic strings and should not be republished without sanitization.
 
+## Firmware Compilation and Memory Analysis
+
+Both firmware programs were successfully compiled using Arduino IDE for their respective microcontroller boards without compilation errors.
+
+| Parameter | ESP32-C3 | Arduino Nano 33 IoT |
+|---|---:|---:|
+| Program storage used | 1,102,843 bytes | 58,500 bytes |
+| Maximum program storage | 1,310,720 bytes | 262,144 bytes |
+| Flash utilization | 84% | 22% |
+| Global variable memory | 40,108 bytes | 5,196 bytes |
+| Maximum dynamic memory | 327,680 bytes | 32,768 bytes |
+| Dynamic memory utilization | 12% | 15% |
+| Remaining dynamic memory | 287,572 bytes | 27,572 bytes |
+| Compilation status | Passed | Passed |
+
+### ESP32-C3 Compilation
+
+![ESP32 Compilation Results](images/esp32_compilation_results.png)
+
+### Arduino Nano 33 IoT Compilation
+
+![Arduino Nano Compilation Results](images/nano_compilation_results.png)
+
+Both firmware programs fit within their respective microcontroller memory limits. These results establish successful software compilation and compile-time memory compatibility. Physical hardware and runtime communication validation of the revised firmware remain pending.
+
 ## Validation and limitations
 The original repository includes an MQTT consumer log with message counters, uptime-like values and RSSI. This supports historical telemetry activity but does not by itself establish sensor accuracy, delivery rates or successful operation of the revised sketches. The revised firmware is a privacy-oriented adaptation of the original code and has not been compiled or hardware-tested in this environment. It uses plain MQTT for a trusted lab network; use authenticated TLS for deployment. No FreeRTOS task creation is present in the inspected sketches.
 

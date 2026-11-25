@@ -13,11 +13,11 @@ Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, -1);
 #define PIR_PIN 2
 
 // ---------- WIFI ----------
-const char ssid[] = "Wifi#10";
-const char pass[] = "11101#10";
+const char ssid[] = "abcd";
+const char pass[] = "xyz";
 
 // ---------- LOCAL SHIFTR.IO MQTT ----------
-const char mqttHost[] = "192.168.1.166";
+const char mqttHost[] = "   ";
 const int  mqttPort   = 2883;
 const char mqttUser[] = "admin";
 const char mqttPass[] = "admin";

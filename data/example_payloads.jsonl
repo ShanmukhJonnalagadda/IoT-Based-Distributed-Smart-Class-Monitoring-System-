@@ -1,0 +1,2 @@
+{"device":"esp32c3","tempC":23.5,"tempF":74.3,"humidity":45.0,"rssi":-42,"uptime_seconds":10,"message_count":5}
+{"device":"nano33iot","pir":1,"rssi":-48,"uptime_seconds":12}

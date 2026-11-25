@@ -65,8 +65,17 @@ Both firmware programs were successfully compiled using Arduino IDE for their re
 
 Both firmware programs fit within their respective microcontroller memory limits. These results establish successful software compilation and compile-time memory compatibility. Physical hardware and runtime communication validation of the revised firmware remain pending.
 
-## Validation and limitations
-The original repository includes an MQTT consumer log with message counters, uptime-like values and RSSI. This supports historical telemetry activity but does not by itself establish sensor accuracy, delivery rates or successful operation of the revised sketches. The revised firmware is a privacy-oriented adaptation of the original code and has not been compiled or hardware-tested in this environment. It uses plain MQTT for a trusted lab network; use authenticated TLS for deployment. No FreeRTOS task creation is present in the inspected sketches.
+## Validation and Limitations
+
+Both revised firmware programs were successfully compiled using Arduino IDE.
+
+The original project demonstrated MQTT telemetry activity. However, the revised firmware has not yet been physically tested on the microcontrollers.
+
+Sensor accuracy, OLED operation, MQTT delivery reliability, runtime memory consumption and network reconnection performance require further hardware validation.
+
+The system uses plain MQTT for trusted laboratory networks. Authenticated TLS communication is recommended for production deployment.
+
+See [validation results](docs/validation.md) for detailed compilation results and the hardware validation plan.
 
 ## Contributions
 Academic team project. Add an accurate description of your individual contributions and acknowledge teammates before publishing.

@@ -20,8 +20,8 @@ const char gNumber = "TEAM_02";
 // ---------- LOCAL SHIFTR.IO MQTT ----------
 const char mqttHost[] = "   ";
 const int  mqttPort   = 2883;
-const char mqttUser[] = "admin";
-const char mqttPass[] = "admin";
+const char mqttUser[] = "YOUR_MQTT_USERNAME";
+const char mqttPass[] = "YOUR_MQTT_PASSWORD";
 
 WiFiClient wifiClient;
 MQTTClient mqttClient(256);
